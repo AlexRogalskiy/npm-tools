@@ -25,7 +25,7 @@ yargs
         "Rewrite source maps",
         args =>
             args.options({
-                cwd: { type: "string", description: "Directory", demandOption: false, defaultValue: process.cwd() },
+                cwd: { type: "string", description: "Directory", demandOption: false, default: process.cwd() },
             }),
         async argv => {
             return (await import("../lib/transformSourceMap")).transformSourceMaps(argv.cwd);
