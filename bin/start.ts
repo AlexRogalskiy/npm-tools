@@ -31,5 +31,16 @@ yargs
             return (await import("../lib/transformSourceMap")).transformSourceMaps(argv.cwd);
         },
     )
+    .command(
+        "git-info",
+        "Rewrite Git information",
+        args =>
+            args.options({
+                cwd: { type: "string", description: "Directory", demandOption: false, default: process.cwd() },
+            }),
+        async argv => {
+            return (await import("../lib/gitInfo")).gitInfo(argv.cwd);
+        },
+    )
     .strict()
     .help().argv;
