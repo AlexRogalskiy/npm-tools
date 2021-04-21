@@ -28,18 +28,36 @@ yargs
                 cwd: { type: "string", description: "Directory", demandOption: false, default: process.cwd() },
             }),
         async argv => {
-            return (await import("../lib/transformSourceMap")).transformSourceMaps(argv.cwd);
+            return (await import("../lib/transform_source_map")).transformSourceMaps(argv.cwd);
         },
     )
     .command(
         "git-info",
-        "Rewrite Git information",
+        "Write Git information",
         args =>
             args.options({
                 cwd: { type: "string", description: "Directory", demandOption: false, default: process.cwd() },
             }),
         async argv => {
-            return (await import("../lib/gitInfo")).gitInfo(argv.cwd);
+            return (await import("../lib/git_info")).git_info(argv.cwd);
+        },
+    )
+    .command(
+        "clean-npm-tags",
+        "Clean up npm dist tags",
+        args =>
+            args.options({
+                cwd: { type: "string", description: "Directory", demandOption: false, default: process.cwd() },
+                name: { type: "string", description: "npm Package name", demandOption: false },
+                regexp: {
+                    type: "string",
+                    description: "Regular expression matching against dist-tag",
+                    demandOption: false,
+                    default: "branch-.*",
+                },
+            }),
+        async argv => {
+            return (await import("../lib/clean_npm_tags")).cleanNpmTags(argv.cwd, argv.name, argv.regexp);
         },
     )
     .strict()

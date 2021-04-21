@@ -17,7 +17,7 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 
-export async function gitInfo(cwd: string): Promise<void> {
+export async function git_info(cwd: string): Promise<void> {
     const gitInfoName = "git-info.json";
     const gitInfoPath = path.join(cwd, gitInfoName);
     const gitInfo = await obtainGitInfo(cwd);
@@ -95,6 +95,7 @@ export interface GitInformation {
 }
 
 export function cleanGitUrl(url: string): string {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const gitUrlParse = require("git-url-parse");
     const gitUrl = gitUrlParse(url);
     gitUrl.user = undefined;
