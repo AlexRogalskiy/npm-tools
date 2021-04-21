@@ -11,7 +11,7 @@ Helpers for NPM-based projects
 This commands will move TypeScript source files into the `src` folder and rewrite the
 source maps.
 
-## Contributing
+## Contributing 
 
 Contributions to this project from community members are encouraged
 and appreciated. Please review the [Contributing
