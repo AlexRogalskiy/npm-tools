@@ -10,9 +10,9 @@ This page details all runtime OSS dependencies of `@atomist/npm-tools`.
 
 | License | Count |
 |---------|-------|
-|[BSD-3-Clause](#bsd-3-clause)|1|
+|[BSD-3-Clause](#bsd-3-clause)|2|
 |[ISC](#isc)|8|
-|[MIT](#mit)|50|
+|[MIT](#mit)|52|
 
 #### BSD-3-Clause
 BSD 3-Clause "New" or "Revised" License - [https://opensource.org/licenses/BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
@@ -20,6 +20,7 @@ BSD 3-Clause "New" or "Revised" License - [https://opensource.org/licenses/BSD-3
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
 |`qs`|`6.10.1`||[https://github.com/ljharb/qs](https://github.com/ljharb/qs)|
+|`source-map`|`0.6.1`|Nick Fitzgerald|[https://github.com/mozilla/source-map](https://github.com/mozilla/source-map)|
 
 #### ISC
 ISC License - [https://www.isc.org/downloads/software-support-policy/isc-license/](https://www.isc.org/downloads/software-support-policy/isc-license/)
@@ -46,6 +47,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`ansi-regex`|`5.0.0`|Sindre Sorhus|[https://github.com/chalk/ansi-regex](https://github.com/chalk/ansi-regex)|
 |`ansi-styles`|`4.3.0`|Sindre Sorhus|[https://github.com/chalk/ansi-styles](https://github.com/chalk/ansi-styles)|
 |`braces`|`3.0.2`|Jon Schlinkert|[https://github.com/micromatch/braces](https://github.com/micromatch/braces)|
+|`buffer-from`|`1.1.1`||[https://github.com/LinusU/buffer-from](https://github.com/LinusU/buffer-from)|
 |`call-bind`|`1.0.2`|Jordan Harband|[https://github.com/ljharb/call-bind](https://github.com/ljharb/call-bind)|
 |`color-convert`|`2.0.1`|Heather Arthur|[https://github.com/Qix-/color-convert](https://github.com/Qix-/color-convert)|
 |`color-name`|`1.1.4`|DY|[https://github.com/colorjs/color-name](https://github.com/colorjs/color-name)|
@@ -82,6 +84,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`reusify`|`1.0.4`|Matteo Collina|[https://github.com/mcollina/reusify](https://github.com/mcollina/reusify)|
 |`run-parallel`|`1.2.0`|Feross Aboukhadijeh|[https://github.com/feross/run-parallel](https://github.com/feross/run-parallel)|
 |`side-channel`|`1.0.4`|Jordan Harband|[https://github.com/ljharb/side-channel](https://github.com/ljharb/side-channel)|
+|`source-map-support`|`0.5.19`||[https://github.com/evanw/node-source-map-support](https://github.com/evanw/node-source-map-support)|
 |`split-on-first`|`1.1.0`|Sindre Sorhus|[https://github.com/sindresorhus/split-on-first](https://github.com/sindresorhus/split-on-first)|
 |`strict-uri-encode`|`2.0.0`|Kevin Mårtensson|[https://github.com/kevva/strict-uri-encode](https://github.com/kevva/strict-uri-encode)|
 |`string-width`|`4.2.2`|Sindre Sorhus|[https://github.com/sindresorhus/string-width](https://github.com/sindresorhus/string-width)|
