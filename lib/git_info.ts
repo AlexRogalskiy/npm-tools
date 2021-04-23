@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
+import * as cp from "child_process";
 import * as fs from "fs-extra";
 import * as path from "path";
+import * as util from "util";
 
 export async function git_info(cwd: string): Promise<void> {
     const gitInfoName = "git-info.json";
@@ -37,6 +39,7 @@ export async function obtainGitInfo(directory: string): Promise<GitInformation> 
         sha: "",
         branch: "",
         repository: "",
+        date: "",
     };
     const gitPath = path.join(directory, ".git");
     const headPath = path.join(gitPath, "HEAD");
@@ -79,6 +82,8 @@ export async function obtainGitInfo(directory: string): Promise<GitInformation> 
             }
         }
     }
+    const exec = util.promisify(cp.exec);
+    gitInfo.date = (await exec(`git show -s --format=%ci ${gitInfo.sha}`, { cwd: directory })).stdout.trim();
     if (!gitInfo.repository) {
         throw new Error(`failed to get remote origin URL from ${configPath}`);
     }
@@ -92,6 +97,7 @@ export interface GitInformation {
     sha: string;
     branch: string;
     repository: string;
+    date: string;
 }
 
 export function cleanGitUrl(url: string): string {
